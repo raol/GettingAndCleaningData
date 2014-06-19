@@ -64,3 +64,4 @@ tidy_data <- melt(full_data, id=c("SubjectId", "Activity"))
 # and get average values across all variables
 tidy_data <- dcast(tidy_data, SubjectId + Activity ~ variable, mean)
 
+write.table(tidy_data, file="tidy_data.txt")
